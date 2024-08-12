@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="clickBtn">click</button>
+    <script>
+        const clickBtn = document.querySelector("#clickBtn")
+        // 버튼 클릭했을 때 함수
+        function handleClick(){
+            alert("버튼이 클릭됌")
+        }
+        // handleClick() => {}
+        clickBtn.addEventListener("click" , handleClick);
+        // 이벤트 핸들러 제거
+        setTimeout(function(){
+            clickBtn.removeEventListener("click" , handleClick)
+        },5000);
+    </script>
+</body>
+</html>

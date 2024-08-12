@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let names = ["선미", "주연", "효인", "준영", "관영", "정은"];
+        console.log(names);
+        
+        let allNames = "";
+        for (let i = 0; i < names.length; i++) {
+            console.log(i);
+            allNames += names[i];
+            if (i < names.length - 1) {
+                allNames += ", ";
+            }
+        }
+        document.write(`학생 이름은: ${allNames}`);
+    </script>
+</body>
+</html>

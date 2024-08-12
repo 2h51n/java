@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bar Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+    * {
+        box-sizing: border-box;
+    }
+    *, *:before, *:after {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    *, :before, :after {
+        border-style: solid;
+        border-width: 0;
+        border-color: rgb(var(--border-color, 0, 0, 0));
+    }
+    
+    /* Root Variables */
+    :root {
+        --background: 255, 255, 255; /* White background */
+        --background-gradient: none;
+        --text-color: 0, 0, 0; /* Black text */
+        --border-color: 200, 200, 200; /* Light grey border */
+        --drawer-max-width: min(92vw, 28.125rem);
+    }
+    
+    /* Main Panel */
+    .header-sidebar__main-panel {
+        background-color: rgb(var(--background));
+        background-image: var(--background-gradient);
+        display: grid;
+        grid-template-rows: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-columns: max-content;
+        height: 100%;
+    }
+    
+    /* Navigation */
+    .header-sidebar__nav {
+        padding: 1rem;
+    }
+    
+    /* Link List */
+    .header-sidebar__linklist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .header-sidebar__linklist-item {
+        padding-block: 1rem;
+    }
+    
+    .header-sidebar__linklist-button {
+        text-align: start;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-block: 0.5rem;
+        transition: color .2s;
+        display: flex;
+        text-decoration: none;
+        color: rgb(var(--text-color));
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+    }
+    
+    /* Hover Effects */
+    .header-sidebar__linklist-button:hover {
+        color: rgb(100, 100, 255); /* Change color on hover */
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="header-wrap">
+        <!-- 상단 헤더라인  [SALE -50% ~ OFF] 팝업 -->
+        <div class="header"><h5>SALE -50% ~ OFF</h5></div>
+        <!-- 메뉴 -->
+        <div class="main-section">
+          <div class="menu-hover">
+            <!-- 상단 좌측 메뉴 리스트 -->
+            <div class="header-menu">
+              <ul class="head-menu-listWrap">
+                <!-- 그래피티 및 벽지 -->
+                <li class="graffiti-menu">
+                  <a href="#" class="subHover"><h2>GRAFFITI</h2></a
+                  ><!-- 그래피티 | 벽지-->
+                  <div class="subDisplay">
+                    <ul class="header-submenu">
+                      <!-- 서브 메뉴 제목 -->
+                      <li>
+                        <h4><a href="#">WALLPAPER</a></h4>
+                        <!-- 서브 메뉴 리스트 -->
+                        <ul>
+                          <li><a href="#">Laminated Wallpaper</a></li>
+                          <li><a href="#">Silk Wallpaper</a></li>
+                          <li><a href="#">Eco Friendly Wallpape</a></li>
+                          <li><a href="#">Foam Wallpaper</a></li>
+                          <li><a href="#">Mural Wallpaper</a></li>
+                          <li><a href="#">Fabric Wallpaper</a></li>
+                          <li><a href="#">Reza Wallpaper</a></li>
+                          <li><a href="#">Vermiculite Wallpaper</a></li>
+                          <li><a href="#">Fire Retardant Wallpaper</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="furniture-menu">
+                  <a href="#" class="subHover"><h2>FURNITURE</h2></a
+                  ><!-- 가구 -->
+                  <div class="subDisplay">
+                    <ul class="header-submenu">
+                      <li>
+                        <!-- 서브 메뉴 제목 -->
+                        <h4><a href="#">Seating</a></h4>
+                        <!-- 의자 -->
+                        <!-- 서브 메뉴 리스트 -->
+                        <ul>
+                          <li><a href="#">Dining Chairs</a></li>
+                          <li><a href="#">Lounge Chairs</a></li>
+                          <li><a href="#">Benches</a></li>
+                          <li><a href="#">Stools</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <!-- 서브 메뉴 제목 -->
+                        <h4><a href="#">Tables</a></h4>
+                        <!-- 테이블 -->
+                        <!-- 서브 메뉴 리스트 -->
+                        <ul>
+                          <li><a href="#">Side Tables</a></li>
+                          <li><a href="#">Coffee Tables</a></li>
+                          <li><a href="#">Dining Tables</a></li>
+                          <li><a href="#">Desks</a></li>
+                          <li><a href="#">Nightstands</a></li>
+                          <li><a href="#">Consoles</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="homewear-menu">
+                  <a href="#" class="subHover"><h2>HOMEWEAR</h2></a
+                  ><!-- 오브제 -->
+                  <div class="subDisplay">
+                    <ul class="header-submenu">
+                      <li class="subtwinImg-w">
+                        <ul class="subtwinImg">
+                          <li>
+                            <a href="#">
+                              <!-- 서브 메뉴 이미지 영역-->
+                              <div class="sub-imgWrap">
+                                <!-- 이미지 -->
+                                <img src="img/homewear-menu-img/homewear-menu(1).png" alt="오브제 서브 메뉴 이미지(1)" />
+                              </div>
+                              <!-- 서브 메뉴 이미지 설명 -->
+                              <div class="sub-imgText">
+                                <h1>DOUGH CERAMICS</h1>
+                                <p>HOMEWARE</p>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <!-- 서브 메뉴 이미지 영역-->
+                              <div class="sub-imgWrap">
+                                <!-- 이미지 -->
+                                <img src="img/homewear-menu-img/homewear-menu(2).png" alt="오브제 서브 메뉴 이미지(2)" />
+                              </div>
+                              <!-- 서브 메뉴 이미지 설명 -->
+                              <div class="sub-imgText">
+                                <h1>PLOUGH THROWS</h1>
+                                <p>100% MERINO WOOL</p>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="interior-menu">
+                  <a href="#" class="subHover"><h2>INTERIOR DESIGN</h2></a
+                  ><!-- 인테리어 디자인 -->
+                  <div class="subDisplay">
+                    <ul class="header-submenu">
+                      <li>
+                        <ul class="subtwinText-i">
+                          <li>
+                            <!-- 서브 메뉴 제목 -->
+                            <h4><a href="#">Retail Design</a></h4>
+                            <!-- 의자 -->
+                            <!-- 서브 메뉴 리스트 -->
+                            <ul>
+                              <li><a href="#">All Projects</a></li>
+                              <li><a href="#">Carhartt Wip</a></li>
+                              <li><a href="#">Hermes Petit H</a></li>
+                              <li><a href="#">Mulberry</a></li>
+                              <li><a href="#">Agender</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <!-- 서브 메뉴 제목 -->
+                            <h4><a href="#">Residential Design</a></h4>
+                            <!-- 테이블 -->
+                            <!-- 서브 메뉴 리스트 -->
+                            <ul>
+                              <li><a href="#">All Projects</a></li>
+                              <li><a href="#">Winchester</a></li>
+                              <li><a href="#">Walter Segal House</a></li>
+                              <li><a href="#">Tapestry Penthouse</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="subtwinImg-w">
+                        <ul class="subtwinImg">
+                          <li>
+                            <a href="#">
+                              <!-- 서브 메뉴 이미지 영역-->
+                              <div class="sub-imgWrap">
+                                <!-- 이미지 -->
+                                <img src="img/furniture-menu-img/furniture-menu(1).png" alt="인테리어 서브메뉴 이미지(1)" />
+                              </div>
+                              <!-- 서브 메뉴 이미지 설명 -->
+                              <div class="sub-imgText">
+                                <h1>MULBERRY</h1>
+                                <p>REGENT STREET</p>
+                              </div>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <!-- 서브 메뉴 이미지 영역-->
+                              <div class="sub-imgWrap">
+                                <!-- 이미지 -->
+                                <img src="img/furniture-menu-img/furniture-menu(2).png" alt="인테리어 서브메뉴 이미지(2)" />
+                              </div>
+                              <!-- 서브 메뉴 이미지 설명 -->
+                              <div class="sub-imgText">
+                                <h1>CASA PALOMA</h1>
+                                <p>IBIZA</p>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <!-- 메인섹션 -->
+            </div>
+            <!-- 모바일 메뉴 리스트 -->
+            <button class="m-menuBt">
+                <i
+                  ><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-hamburger" viewBox="0 0 24 24">
+                    <path d="M1 19h22M1 12h22M1 5h22" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path></svg
+                ></i>
+              </button>
+              <div class="m-menu">
+                <button class="closeBt-m">
+                  <svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+                    <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"></path>
+                  </svg>
+                </button>
+                <header class="header-sidebar__main-panel">
+                    <nav class="header-sidebar__nav">
+                        <ul class="header-sidebar__linklist">
+                            <li class="header-sidebar__linklist-item"><a href="#" class="header-sidebar__linklist-button">Home</a></li>
+                            <li class="header-sidebar__linklist-item"><a href="#" class="header-sidebar__linklist-button">About</a></li>
+                            <li class="header-sidebar__linklist-item"><a href="#" class="header-sidebar__linklist-button">Services</a></li>
+                            <li class="header-sidebar__linklist-item"><a href="#" class="header-sidebar__linklist-button">Contact</a></li>
+                        </ul>
+                    </nav>
+                </header>
+              </div>
+            <!-- 상단 우측 아이콘 리스트 -->
+            <div class="header-icon">
+                <ul class="head-icon-listWrap">
+                  <li>
+                    <i
+                      ><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-search" viewBox="0 0 24 24">
+                        <path d="M10.364 3a7.364 7.364 0 1 0 0 14.727 7.364 7.364 0 0 0 0-14.727Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
+                        <path d="M15.857 15.858 21 21.001" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"></path></svg
+                    ></i>
+                  </li>
+                  <li>
+                    <a href="login.html" class="sidebar-login"><i><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-account" viewBox="0 0 24 24">
+                      <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path>
+                    </svg></i></a>
+                  </li>
+                  <li><i class="cartBt"><svg aria-hidden="true" fill="none" focusable="false" width="24" class="header__nav-icon icon icon-cart" viewBox="0 0 24 24"><path d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></i></li>
+                  <div class="cartList">
+                    <button class="closeBt-c">
+                      <svg aria-hidden="true" focusable="false" fill="none" width="16" class="icon icon-close" viewBox="0 0 16 16">
+                        <path d="m1 1 14 14M1 15 15 1" stroke="currentColor" stroke-width="1.5"></path>
+                      </svg>
+                    </button>
+                    <ul>
+                      <li>
+                        <h2>GRAFFITI</h2>
+                        <button></button>
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </div>
+          </div>
+          <!-- 배경 이미지 -->
+        </div>
+      </div>
+
+</body>
+</html>

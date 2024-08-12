@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom css</title>
+    <style>
+#container{
+    width: 400px;
+    margin: 50px auto;
+}
+#box{
+    width:100px;
+         height:100px;         
+         border:1px solid #222;
+         margin:30px auto;
+         transition: 1s;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p>도형 위로 마우스 포인터를 올려주세요</p>
+        <div id="box"></div>
+    </div>
+    <script>
+        const myBox = document.querySelector("#box")
+        // 박스에 addEventListener mouseOver해서
+        myBox.addEventListener("mouseover" ,function(){
+    // 박스의 스타일에 배경색을 초록색으로 설정
+    myBox.style.backgroundColor = "green";
+    // 박스의 스타일에 테두리 반경을 50%로 설정하여 둥글게 만듦
+    myBox.style.borderRadius = "50%";
+        });
+        // 박스에 addEventListener를 사용하여 mouseout 이벤트를 처리
+myBox.addEventListener("mouseout", function() {
+    // 박스의 스타일을 원래대로 되돌림
+    myBox.style.backgroundColor = "";
+    myBox.style.borderRadius = "";
+});
+
+    </script>
+</body>
+</html>

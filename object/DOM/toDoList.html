@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할 일 리스트</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>TodoList 😎</header>
+      <form class="inputField">
+        <input type="text" id="addValue" placeholder="할 일 추가하기" autofocus />
+        <button type="button" id="btn"><i class="xi-plus xi-2x"></i></button>
+      </form>
+      <div>
+        <ul id="result" class="todoList">
+          <!-- js -->
+        </ul>
+      </div>
+      <div class="footer">
+        <button type="button" id="allClear">모두 삭제</button>
+      </div>
+    </div>
+  </body>
+</html>

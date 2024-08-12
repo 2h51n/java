@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>submit 이벤트</h1>
+    <div class="form-wrap">
+        <form id="myForm">
+            <label for="name">이름</label>
+            <input id="name" type="text"/>
+            <br/>
+            <label for="email">이메일</label>
+            <input id="email" type="text"/>
+            <br/>
+            <button type="submit">폼 제출하기</button>
+        </form>
+        <div id="output"></div>
+        <!-- js로 출력 -->
+    </div>
+    <h1>submit 이벤트2</h1>
+    <div class="form-wrap">
+        <form id="myFormed">
+            <label for="bloodtype">혈액형</label>
+            <input id="bloodtype" type="text"/>
+            <br/>
+            <label for="feet">신장</label>
+            <input id="feet" type="text"/>
+            <br/>
+            <button type="submit">제출하기</button>
+        </form>
+        <div id="output2"></div>
+        <!-- js로 출력 -->
+    </div>
+    <script>
+        const form1 = document.querySelector("#myForm");
+        const output = document.querySelector("#output");
+        form1.addEventListener("submit", function(event) {
+            event.preventDefault(); // 폼 제출 기본 동작 방지
+            // 입력 값 가져오기
+            const nameE = document.querySelector("#name").value;
+            const emailE = document.querySelector("#email").value;
+            // 콘솔에 출력
+            console.log(nameE);
+            console.log(emailE);
+            // 출력 영역에 이름과 이메일을 표시
+            output.innerHTML = `<p>이름: ${nameE}</p><p>이메일: ${emailE}</p>`;
+        });
+        const form2 = document.querySelector("#myFormed");
+        const output2 = document.querySelector("#output2");
+        form2.addEventListener("submit", function(event){
+            event.preventDefault();
+            const bloodtype = document.querySelector("#bloodtype").value;
+            const feet = document.querySelector("#feet").value;
+            console.log(bloodtype);
+            console.log(feet);
+            output2.innerHTML = `<p>혈액형: ${bloodtype}</p><p>신장: ${feet}</p>`;
+        });
+    </script>
+</body>
+</html>

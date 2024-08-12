@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function greeting(name) {
+        return `안녕하세요 ${name} 님`;
+      }
+
+      let message = greeting("이효인");
+      let message1 = greeting("그린이들");
+
+      document.write(`${message} <br>`);
+      document.write(`${message1} <br>`); // <br> 태그를 추가하여 줄바꿈
+      // 함수 호출
+      function add(c, d) {
+        // 두 개의 매개변수를 더한 값을 반환
+        let sum = c + d;
+        return c + d;
+      }
+      // 예시로 두 개의 숫자를 전달
+      let result = add(10, 20);
+      document.write(`결과: ${result}`); // 결과를 보기 쉽게 텍스트 추가
+    </script>
+  </body>
+</html>

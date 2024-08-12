@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="addItemBtn">Add Item</button>
+    <script>
+        // 버튼과 리스트 요소를 선택
+        const addBtn = document.querySelector("#addItemBtn");
+        const list = document.querySelector("#list");
+        // 버튼 클릭 시 새로운 항목과 제목을 추가하는 이벤트 리스너
+        addBtn.addEventListener("click", () => {
+            // 1. 새로운 리스트 항목 요소를 만든다
+            const newItem = document.createElement("li");
+            // 2. 새 항목에 들어갈 텍스트를 설정한다
+            newItem.textContent = 'Item 4';
+            // 3. 새 항목에 클래스 속성을 추가한다
+            newItem.setAttribute("class", "item4");
+            // 4. 리스트 요소에 새 항목을 추가한다
+            list.appendChild(newItem);
+            // 1. 새로운 제목 요소를 만든다
+            const nameHeader = document.createElement("h1");
+            // 2. 제목에 들어갈 텍스트를 설정한다
+            nameHeader.textContent = '이효인';
+            // 3. 제목에 ID 속성을 추가한다
+            nameHeader.setAttribute("id", "nameHeader");
+            // 4. 리스트 요소에 제목을 추가한다
+            list.appendChild(nameHeader);
+            const newImg2 = document.createElement("img");
+        newImg2.setAttribute("src", "image/cup-2.png");
+        newImg2.setAttribute("alt", "bluecup");
+        list.appendChild(newImg2);
+        const newImg1 = document.createElement("img");
+        newImg1.setAttribute("src", "image/cup-1.png");
+        newImg1.setAttribute("alt" , "redcup");
+        list.appendChild(newImg1);
+        const imgname = document.createElement("img")
+        imgname.setAttribute("div" , "imgname");
+        });
+    </script>
+</body>
+</html>

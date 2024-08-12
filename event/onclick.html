@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자색 바꾸기</title>
+    <style>
+      .txtP {
+        transition: color 0.3s ease;
+      }
+      .changedColor {
+        color: rgb(194, 140, 182);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btnColor">글자색 바꾸기</button>
+    <p class="txtP">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore nemo praesentium nulla quos, assumenda soluta provident dolores corporis a earum modi corrupti culpa sunt ad maxime doloribus quas explicabo aperiam.</p>
+    <script>
+      // function changeTxtcolor(){
+      //     const txtColor = document.querySelector(".txtP");
+      //     txtColor.classList.toggle("changedColor");
+      // }
+      // 랜덤으로 글자색 바꾸기
+      document.querySelector("#btnColor").addEventListener("click", function (){
+        const txtColor = document.querySelector(".txtP");
+        const colors = ["red", "blue", "green", "pink", "skyblue" , "yellow" ,"hotpink"];
+        // Math.random - 0과 1사이에서 무작위 소수를 반환한다.
+        // Math.floor() - 숫자 소수점을 이하를 버리고, 가장 가까운 정수로 내림한다.
+        const randomIntex = Math.floor(Math.random() * colors.length);
+        // console.log(colors);
+        // console.log(colors.length);
+        // console.log(Math.random()*colors.length);
+        // console.log(Math.random(Math.random()*colors.length));
+        const randomColor = colors[randomIntex];
+        // console.log(randomColor);
+        txtColor.style.color = randomColor;
+      });
+    </script>
+  </body>
+</html>
