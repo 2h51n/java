@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수 종류(숫자 , 문자열 , 블리언 , 배열 , 객체)
+        // 숫자
+        let myAge = 20;
+        console.log(typeof myAge);
+        // 문자열
+        let name = "이효인"
+        console.log(typeof name);
+        // 블리언
+        let isOpen = true
+        console.log(typeof isOpen);
+        // 배열
+        let myNameArray = ["김갑수" , "최팔득" , "구춘화" , "최칠갑"]
+        let myNumberArray = [1,2,3,4]
+        console.log(typeof myNumberArray);
+        console.log(myNameArray[0]);
+        console.log(myNameArray[3]);
+        // 객체
+        let dog = {
+            name : ["애플","솜","이브",],
+            age: [1,2,3,4], 
+        };
+        console.log(dog.name);
+        console.log(dog.name[0]);
+        console.log(dog.age[2]);
+        // 객체 응용
+        let fruit = {
+            name : ["사과","포도","수박","메론","감","파인애플"],
+            ea: ["4","3","7","15","30","4",],
+            price: ["8000","10000","5000","4000","5500"]
+        };
+        console.log(fruit.name);
+        console.log(fruit.name[5]);
+        console.log(fruit.ea[3]);
+        console.log(fruit.price[1]);
+    </script>
+</body>
+</html>

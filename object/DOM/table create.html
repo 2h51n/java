@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 만들기</title>
+    <style>
+      form {
+        margin-bottom: 30px;
+      }
+      input[type="text"] {
+        width: 30px;
+      }
+      button {
+        margin-left: 30px;
+      }
+      table {
+        width: 300px;
+        border-collapse: collapse;
+      }
+      td, th {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+  <form id="tableForm">
+    <input type="text" id="rCount" value="1"> 행
+    <input type="text" id="cCount" value="1"> 열
+    <button type="submit">작성</button>
+  </form>
+  <div id="contents">
+    <!-- js -->
+  </div>
+  <script>
+    const form = document.querySelector("#tableForm");
+    // 추가를 클릭했을 때 함수
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      createTable();
+    });
+
+    // 테이블 생성 함수
+    function createTable() {
+      // 행과 열을 가져옴 
+      const rCount = document.querySelector("#rCount").value;
+      const cCount = document.querySelector("#cCount").value;
+      // 새로운 테이블 요소 생성
+      const newTable = document.createElement("table");
+      Array.from({ length: rCount }).forEach(function(_, i) {
+        // 새로운 행(tr) 요소
+        const newRow = document.createElement("tr");
+        Array.from({ length: cCount }).forEach(function(_, j) {
+          // 새로운 셀(td) 요소를 생성하고 텍스트 노드를 추가
+          const newCell = document.createElement("td");
+          const cellText = document.createTextNode(`${i + 1}, ${j + 1}`);
+          newCell.appendChild(cellText);
+          newRow.appendChild(newCell);
+        });
+        newTable.appendChild(newRow);
+      });
+      const contents = document.querySelector("#contents");
+      contents.innerHTML = "";
+      contents.appendChild(newTable);
+    }
+  </script>
+</body>
+</html>

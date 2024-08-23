@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+</head>
+<body>
+    <button class="bt">클릭하세요</button>
+    <p class="displayTxt"></p>
+    <!-- 다른 버튼을 만들기 -->
+     <!-- 1.버튼 만들기 -->
+    <button class="bt2">여기 클릭</button>
+    <!-- 2.내용담을 p태그 만들기 -->
+     <p class="displayTxt2"></p>
+    <script>
+        // 1.버튼을 변수 저장하기
+    //     const button = document.querySelector('.bt');
+    //     const displayTxt = document.querySelector(".displayTxt")
+    //     // 2.저장한 변수에 클릭 했을 떄 행동
+    //     button.addEventListener('click' , function(){
+    //     alert('버튼이 클릭되었습니다.');
+    //     // document.write("안녕하세요.");
+    //     displayTxt.innerHTML = '안녕하세요';
+    // });
+    // 다른버튼에 클릭 이벤트를 적용
+    const button1=document.querySelector('.bt2');
+    const displayTxt2 = document.querySelector(".displayTxt2");
+    button1.addEventListener("click" , function(){
+      displayTxt2.innerHTML = '클릭성공';  
+    })
+    // clickBt.addEventListener("click" , function(){
+    // })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 연결</title>
+    <!-- <script src="js/main.js"></script> -->
+</head>
+<body>
+    <script>
+        // // alert("안녕하세요")
+        // confirm("화면을 종료하시겠습니까?")
+        // var name = prompt("이름을 입력하세요");
+        // console.log(name);
+        // document.write(`<h1> ${name} 님 ! 반갑습니다.</h1>`);
+        // alert("ㅎㅇㅎㅇ")
+        // var age = prompt("나이를 입력하세요")
+        // console.log(age);
+        // document.write(`<p> 당신의 나이는 ${age} 입니다.{p}`);
+        var now = new Date()
+        var display = now.toLocaleTimeString()
+        // console.log(now);
+        // console.log(display);
+        // 화면출력
+        document.write(`현재시각은 ${display} 입니다.`)
+        // 현재시간은 00 입니다.
+        var displayDate = now.toLocaleDateString()
+        document.write(`현재 날짜는 ${displayDate} 입니다.`)
+        var displaylocal = now.toISOString(123)
+        console.log(toISOString);
+        document.write(`현재 날짜는 ${displayDate} 이며,현재시각은 ${display} 이므로 지금은 ${toISOString} 입니다.`)
+
+    </script>
+</body>
+</html>

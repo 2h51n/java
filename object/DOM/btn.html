@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Animation Example</title>
+    <style>
+      :root {
+        --button-background: 60, 120, 240; /* RGB 값 */
+        --button-text-color: 255, 255, 255; /* RGB 값 */
+        --button-outline-color: 60, 120, 240; /* RGB 값 */
+        --button-border-radius: 5px;
+        --button-font: 16px Arial, sans-serif;
+        --button-letter-spacing: 1px;
+        --button-text-transform: uppercase;
+        --transform-origin-end: 100% 0;
+        --transform-origin-start: 0 0;
+      }
+      .button, .shopify-challenge__button, .shopify-payment-button__button--unbranded {
+        --initial-gradient: linear-gradient(rgb(var(--button-background)), rgb(var(--button-background)));
+        --hover-gradient: linear-gradient(transparent, transparent);
+        --initial-background-position: var(--transform-origin-end);
+        --hover-background-position: var(--transform-origin-start);
+        -webkit-appearance: none;
+        appearance: none;
+        text-transform: var(--button-text-transform);
+        font: var(--button-font);
+        letter-spacing: var(--button-letter-spacing);
+        text-shadow: none;
+        text-align: center;
+        cursor: pointer;
+        color: rgb(var(--button-text-color));
+        border: 1px solid rgb(var(--button-outline-color, var(--button-background)));
+        border-radius: var(--button-border-radius);
+        background-color: #0000;
+        background-image: var(--initial-gradient), var(--hover-gradient);
+        background-size: 100% 100%, 0 100%;
+        background-position: var(--initial-background-position);
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1.125rem;
+        padding: .65rem 1.75rem;
+        transition: background-size .45s cubic-bezier(.785,.135,.15,.86), background-position .45s step-end, color .45s cubic-bezier(.785,.135,.15,.86), border .45s cubic-bezier(.785,.135,.15,.86);
+        display: inline-flex;
+        position: relative;
+      }
+      .button:hover, .shopify-challenge__button:hover, .shopify-payment-button__button--unbranded:hover {
+        background-size: 0 100%, 100% 100%;
+        background-position: var(--hover-background-position);
+      }
+    </style>
+</head>
+<body>
+    <button class="button">Click Me</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #0c3268;
+        color: #fff;
+        font-size: 20px;
+      }
+      p {
+        margin-top: 80px;
+        font-size: 1em;
+        font-weight: 700;
+        text-align: center;
+        text-shadow: 1px 2px 1px #000;
+      }
+      p strong {
+        font-size: 2.2em;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let site = prompt("구글, 네이버, 유튜브 / 즐겨 사용하는 포털 검색 사이트는?");
+      let url;
+      switch (site) {
+          case "구글":
+              url = "www.google.com";
+              break;
+          case "네이버":
+              url = "www.naver.com";
+              break;
+          case "유튜브":
+              url = "www.youtube.com";
+              break;
+          default:
+              alert("보기에 없는 사이트 입니다.");
+      }
+      if (url) {
+          location.href = `http://${url}`;
+      }
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 재사용 예제</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(184, 252, 201);
+        border: 1px dashed black;
+        transition: all 0.3s;
+      }
+      .colorCh{
+        background-color: rgb(44, 27, 59);
+        border-radius: 50%;
+        border: 10px dotted #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>함수 재사용하기</h1>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <script>
+      const box1= document.querySelector(".box1")
+      const box2= document.querySelector(".box2")
+      const box3= document.querySelector(".box3")
+      const box4= document.querySelector(".box4")
+      // 색이 바뀌는 기능을 함수에 저장
+      function colorChange(){
+        this.classList.toggle("colorCh")
+      }
+      // box1에 클릭 이벤트 적용
+      box1.addEventListener("click" , colorChange )
+      box2.addEventListener("mouseout" , colorChange )
+      box3.addEventListener("dblclick" , colorChange )
+      box4.addEventListener("mousemove" , colorChange )
+    </script>
+  </body>
+</html>

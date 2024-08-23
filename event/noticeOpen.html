@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 30%;
+        }
+        #container img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="contanier">
+        <h1>이벤트 공지</h1>
+        <img src="../img/펭귄살인마.jpg" alt="펭귄">
+        <p>
+            <a href="#" id="detail-link">자세히 보기 1</a>
+            <a href="#" id="detail-link">자세히 보기 2</a>
+            <a href="#" id="detail-link">자세히 보기 3</a>
+            <a href="#" id="detail-link">자세히 보기 4</a>
+        </p>
+    </div>
+    <script>
+        const detaillink = document.getElementById("detail-link")
+        detaillink.addEventListener("click",function(){
+            loadURL("main._notice.html")//링크의 href를 사용한다.
+        })
+        // 링크가 해당하는 주소로 이동하는 함수
+        function loadURL(){
+            const url = "main._notice.html"
+            if(window.opener){
+                window.opner.location = url //부모창의 location에 url를 넘겨준다.
+            }else{
+                alert("페이지가 없습니다.")
+            }
+        }
+    </script>
+</body>
+</html>

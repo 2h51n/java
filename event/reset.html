@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reset 이벤트</title>
+</head>
+<body>
+    <h1>reset 이벤트</h1>
+    <div class="form-wrap">
+        <form id="myForm">
+            <label for="name">이름:</label>
+            <input id="name" type="text" />
+            <br />
+            <label for="email">이메일:</label>
+            <input id="email" type="text" />
+            <br />
+            <button type="reset">폼 리셋하기</button>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script>
+        const form = document.querySelector("#myForm");
+        const output = document.querySelector("#output");
+        // 폼의 reset 이벤트 리스너 추가
+        form.addEventListener("reset", function(event) {
+            alert("폼이 리셋되었습니다."); // 콘솔에 리셋 메시지 출력
+            // 출력 영역에 리셋 메시지 표시
+            output.innerHTML = `<p>폼이 리셋되었습니다. 모든 입력이 초기화되었습니다.</p>`;
+        });
+    </script>
+</body>
+</html>

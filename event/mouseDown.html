@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 다운</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(240, 143, 107);
+            border: 2px solid black;
+            transition: all 0.3s;
+        }
+        .colorChange{
+            background-color: dodgerblue;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>mouseDown 이벤트</h1>
+    <div class="box"></div>
+<script>
+    const boxColor = document.querySelector(".box")
+    boxColor.addEventListener("mousedown",function(){
+        // console.log(this);
+        // this.style.backgroundColor = "blue"
+        this.classList.toggle("colorChange")
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 30%;
+        }
+        #container img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>이벤트 공지</h1>
+    <img src="../img/펭귄살인마.jpg" alt="이미지" />
+    <ul>
+        <li><a href="#" class="detail-link" data-url="onclick.html" target="_blank">자세히 보기 1</a></li>
+        <li><a href="#" class="detail-link" data-url="keyUp.html" target="_blank">자세히 보기 2</a></li>
+        <li><a href="#" class="detail-link" data-url="mouseDown.html" target="_blank">자세히 보기 3</a></li>
+        <li><a href="#" class="detail-link" data-url="resize.html" target="_blank">자세히 보기 4</a></li>
+    </ul>
+
+    <script>
+        // 모든 .detail-link 요소 선택
+        const detailLinks = document.querySelectorAll(".detail-link");//document.getSelectorAll("detail-link")를 사용했는데, 이는 잘못된 메서드 이름입니다. 올바른 메서드는 document.querySelectorAll입니다. 
+        detailLinks.forEach(function(link) {
+            link.addEventListener("click", function(event) {
+                event.preventDefault(); // 링크 기본 동작 막기
+                const urlData = this.getAttribute("data-url"); // 클릭한 링크의 data-url 속성 값 가져오기
+                const target = this.getAttribute("target");
+                if(target === "_blank"){
+                    window.open(urlData , "_blank")
+                }else{
+                    alert("페이지가 없습니다.")
+                }
+                loadURL(url); // loadURL 함수 호출
+            });
+        });
+        // 링크가 해당하는 주소로 이동하는 함수
+        function loadURL(url) {
+            window.location.href = url; // 현재 창에서 URL로 이동
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1부터 5까지의 합을 구함.
+        let sum = 0;
+        sum += 1;
+        sum += 2;
+        sum += 3;
+        sum += 4;
+        sum += 5;
+        // console.log(sum);
+        // 1부터 100까지의 합을 구함.
+        let num = 0;
+        for (let i = 1; i <= 100; i++) {
+            num += i;
+        }
+        console.log(num);
+        // 결과를 HTML에 출력.
+        document.write(`1부터 5까지 더한 합은 ${sum}<br>`);
+        document.write(`1부터 100까지 더한 합은 ${num}`);
+    </script>
+</body>
+</html>

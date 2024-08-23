@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(177, 185, 255);
+        transition: all 0.3s;
+      }
+      .active {
+        width: 200px;
+        height: 200px;
+        background-color: honeydew;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>resize 이벤트</h1>
+    <div class="box"></div>
+    <p>브라우저 크기를 조정 해주세요</p>
+    <script>
+      // 박스를 변수에 담는다.
+      const box = document.querySelector(".box");
+
+      function handleResize() {
+        if (window.innerWidth < 1000) {
+          box.classList.add("active");
+        } else {
+          box.classList.remove("active");
+        }
+      }
+      // 처음 로드될 때도 이벤트를 처리하기 위해 호출
+      handleResize();
+      // resize 이벤트 리스너 추가
+      window.addEventListener("resize", handleResize);
+    </script>
+  </body>
+</html>

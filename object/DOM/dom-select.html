@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">안녕하세요.</h1>
+    <p class="description">여기는 p 태그입니다.</p>
+    <button id="changeTextBtn">텍스트 변경</button>
+    <script>
+      // 요소 선택
+      const titleElement = document.getElementById('title');
+      const descriptionElement = document.querySelector('.description');
+      const buttonElement = document.getElementById('changeTextBtn');
+
+      // 텍스트 변경
+      // 1. 버튼을 클릭
+      buttonElement.addEventListener('click', function() {
+        // 1. title에 innerHTML은 "바뀌는 내용 (태그까지 변경가능)"
+        titleElement.innerHTML = `<h4 class="title">반갑습니다.</h4>`;
+        // 2. description에 innerHTML은 "이효인"으로 변경
+        descriptionElement.innerHTML = `<h2 id="description">이효인</h2>`;
+        // 3. 새로운 형식 하나 더 작성
+        const newElement = document.createElement('p');
+        newElement.textContent = "추가된 새로운 문단입니다.";
+        document.body.appendChild(newElement);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마우스 아웃</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(82, 240, 122);
+        border: 1px dashed black;
+        transition: all 0.3s;
+      }
+      .colorChange {
+        background-color: rgb(233, 255, 154);
+        border-radius: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>mouseOut 이벤트</h1>
+    <div class="box"></div>
+    <script>
+      const boxClolor = document.querySelector(".box");
+      boxClolor.addEventListener("mouseout", function () {
+        boxClolor.classList.add("colorChange");
+      });
+      boxClolor.addEventListener("mouseover", function () {
+        boxClolor.classList.remove("colorChange");
+      });
+    </script>
+  </body>
+</html>

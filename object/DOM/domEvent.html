@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom에 직접 함수 설정</title>
+</head>
+<body>
+    <img src="img/펭귄살인마.jpg" alt="이미지" id="peng">
+    <script>
+        // // ID로 이미지 요소 선택
+        // const peng = document.querySelector("#peng");
+        // // 이미지가 클릭되었을 때 호출될 함수 정의
+        // function handleClick() {
+        //     // 이미지 경로를 새로운 이미지로 변경
+        //     peng.src = 'tree-5.jpg';
+        // }
+        // // 이미지에 이벤트 리스너 추가
+        // peng.addEventListener('click', handleClick);
+        // ID로 이미지 요소 선택
+        const peng = document.querySelector("#peng");
+        // 원본 이미지 경로 저장
+        const originalSrc = peng.getAttribute("src");
+        // 새로운 이미지 경로
+        const newSrc = '../img/tree-2.jpg';
+        // 이미지가 클릭되었을 때 호출될 함수 정의
+        function handleClick() {
+            // 현재 이미지 경로가 원본 경로와 같으면 새로운 이미지로 변경
+            if (peng.getAttribute("src") === originalSrc) {
+                peng.setAttribute("src", newSrc);
+            } else {
+                // 그렇지 않으면 원본 이미지로 변경
+                peng.setAttribute("src", originalSrc);
+            }
+        }
+        // 이미지에 이벤트 리스너 추가
+        peng.addEventListener('click', handleClick);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>매서드 가져오기</title>
+  </head>
+  <body>
+    <a href="http://www.naver.com">네이버</a>
+    <script>
+      // 링크 요소 가져오기
+      const aEl = document.querySelector("a");
+      // 기존 href 속성 값 가져오기
+      const href = aEl.getAttribute("href");
+      console.log("기존 href:", href);
+      // href 속성 값을 구글로 변경
+      aEl.setAttribute("href", "http://www.google.com");
+      // 텍스트 내용 변경
+      aEl.innerHTML = "구글";
+      // target 속성 추가
+      aEl.setAttribute("target", "_blank");
+      // 클래스명 추가
+      aEl.setAttribute("class" , "aElement");
+      // ID 명 추가
+      aEl.setAttribute("id", "aElement");
+      console.log("수정된 링크 요소:", aEl);
+    </script>
+  </body>
+</html>
